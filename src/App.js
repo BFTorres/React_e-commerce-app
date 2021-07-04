@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { commerce } from './lib/commerce';
-import { Products, Navbar } from './components';
+import { Products, Navbar, Cart } from './components';
 
 // rafce
 const App = () => {
@@ -13,12 +13,12 @@ const App = () => {
         setProducts(data);
     }
 
-    const fetchcart = async () => {
-        setCart(await commmerce.cart.retrieve());
+    const fetchCart = async () => {
+        setCart(await commerce.cart.retrieve());
     }
 
     const handleAddToCart = async (productId, quantity) => {
-        const response = await commerce.cart.add(productId, quantity);
+        const item = await commerce.cart.add(productId, quantity);
 
         setCart(item.cart);
     }
@@ -30,8 +30,8 @@ const App = () => {
 
     return (
         <div>
-            <Navbar />
-            <Products products={products} onAddToCart={handleAddToCart}/>
+            <Navbar totalItems={cart.total_items} />
+            <Products products={products} onAddToCart={handleAddToCart} />
         </div>
     )
 }
