@@ -1,13 +1,16 @@
 import React from 'react'
 
+import { Products, Navbar } from './components';
+
 // rafce
-const app = () => {
+const App = () => {
     return (
         <div>
-            E-commerce
+            <Navbar />
+            <Products />
         </div>
     )
 }
 
-export default app;
+export default App;
 
