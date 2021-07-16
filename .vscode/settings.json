@@ -1,0 +1,13 @@
+{
+    "editor.autoClosingBrackets": "always",
+    "bracket-pair-colorizer-2.highlightActiveScope": true,
+    "prettier.jsxBracketSameLine": true,
+    "oneDarkPro.editorTheme": "justBlack",
+    "editor.fontFamily": "'Roboto', Menlo, Monaco, 'Courier New', monospace",
+    "bracket-pair-colorizer-2.colors": [
+
+        "Gold",
+        "Orchid",
+        "LightSkyBlue"
+    ]
+}
